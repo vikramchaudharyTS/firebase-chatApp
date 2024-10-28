@@ -55,14 +55,15 @@ main::-webkit-scrollbar-thumb {
 }
 
 form {
-  height: 10vh;
+  height: 8vh;
+  border-radius: 5px;  
+  overflow: hidden;
   position: fixed;
   bottom: 0;
   background-color: rgb(24, 23, 23);
   width: 100%;
-  max-width: 728px;
   display: flex;
-  font-size: 1.5rem;
+  font-size: .5rem;
 }
 
 form button {
@@ -72,14 +73,14 @@ form button {
 
 
 input {
-  line-height: 1.5;
+  /* line-height: 1.5; */
   width: 100%;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   background: rgb(58, 58, 58);
   color: white;
   outline: none;
   border: none;
-  padding: 0 10px;
+  padding: 5px 10px;
 }
 
 button {
@@ -106,8 +107,6 @@ button:disabled {
   max-width: 400px;
   margin: 0 auto;
 }
-
-
 
 
 ul, li {
