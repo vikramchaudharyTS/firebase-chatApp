@@ -69,7 +69,7 @@ function ChatRoom() {
       setMessages(messagesData);
     });
     return unsubscribe;
-  }, []);
+  }, [messagesQuery]);
 
   const sendMessage = async (e) => {
     e.preventDefault();
