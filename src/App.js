@@ -49,10 +49,19 @@ function SignIn() {
   return <button onClick={signInWithGoogle}>Sign in with Google</button>;
 }
 
-function SignOut() {
-  return auth.currentUser && (
-    <button onClick={() => signOut(auth)}>Sign Out</button>
-  );
+function SignIn() {
+  const signInWithGoogle = async () => {
+    const provider = new GoogleAuthProvider();
+    try {
+      await setPersistence(auth, browserLocalPersistence);
+      await signInWithPopup(auth, provider);
+    } catch (error) {
+      console.error("Google sign-in failed:", error);
+      alert("Unable to sign in. Please try a different browser or disable VPN if active.");
+    }
+  };
+  
+  return <button onClick={signInWithGoogle}>Sign in with Google</button>;
 }
 
 function ChatRoom() {
